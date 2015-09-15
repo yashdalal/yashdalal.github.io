@@ -1,4 +1,6 @@
-function parseText(){
-	var text = document.getElementById("text").value;
-	document.getElementById("demo").innerHTML = text;			
-}
+$( document ).ready(function() {
+	$('#text').on('input', function(){
+		var text = $('text').val();
+		$('#demo').innerHTML = text;			
+	});
+});	
