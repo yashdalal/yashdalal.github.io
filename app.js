@@ -1,12 +1,12 @@
-function parse(){
-	var x = document.getElementById("text").value;
-	document.getElementById("demo").innerHTML= x;
-}
+//function parse(){
+//	var x = document.getElementById("text").value;
+//	document.getElementById("demo").innerHTML= x;
+//}
 
 
 $(document).ready(function() {
-	$("#text").on("input", function(){
+	$("#button").click(function(){
 		var text = $("text").val();
-		$("#demo").val(text);			
+		$("#demo").text(text);		
 	});
 });	
