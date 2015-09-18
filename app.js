@@ -1,5 +1,5 @@
 function parse(){
-	var x = document.getElementById("text").value.split;
+	var x = document.getElementById("text").value.split();
 	document.getElementById("demo").innerHTML= x;
 }
 
