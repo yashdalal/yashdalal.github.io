@@ -5,7 +5,7 @@ function parse(){
 		var word = (x[i] == "text") ? "bleeeh" : x[i];
 		output += word + " ";
 	}
-	document.getElementById("demo").innerHTML= x;
+	document.getElementById("demo").innerHTML= output;
 }
 
 
