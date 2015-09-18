@@ -1,9 +1,9 @@
 function parse(){
 	var x = document.getElementById("text").value.split(" ");
+	var output;
 	for (var i = 0; i<x.length; i++){
-		if (x[i] == "text"){
-			x[i] = "bleeeh";
-		}	
+		var word = (x[i] == "text") ? "bleeeh" : x[i];
+		output += word + " ";
 	}
 	document.getElementById("demo").innerHTML= x;
 }
