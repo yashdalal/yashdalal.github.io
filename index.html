@@ -4,21 +4,49 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>LayTech Editor</title>
-    <link href="bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Yash Dalal</title>
+    <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div class="container">
-		<h1>LayTech Editor</h1>
-    <p>Welcome to Laytech Text Editor. Start typing in the box below to see difficult terminology converted to easier english.</p>
-		<textarea class="form-control" rows="10" onkeyup="parse()" id="text"></textarea>
-		<br>
-		<p id="demo"></p>
-    <input type="text" id="search"></input> 
-    <button class="btn btn-primary" id="api" onclick="apiCall()">Search</button>
-	</div>
+    <div class="container-fluid">
+      <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <div class="navbar-header page-scroll">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse-my-nav">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand brand-style" href="index.html">
+                <img src="resources/images/website-logo.png">
+              </a>
+            </div>
+          </div>
+
+          <div class="collapse navbar-collapse" id="collapse-my-nav">
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                <a href="index.html">About</a>
+              </li>
+              <li>
+                <a href="index.html">Projects</a>
+              </li>
+              <li>
+                <a href="index.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </nav>
+  	</div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
 	<script src="app.js"></script>
+  <script src="jquery.csv-0.71.js"></script>
   </body>
 </html>
+  

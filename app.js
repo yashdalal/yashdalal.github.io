@@ -1,21 +1,27 @@
+
+
 function apiCall() {
-	var apiKeyMedDict = "aeee5df0-8558-4f8d-8d5d-83d30f069852";
-	var query = document.getElementById("search");
-	var url = "http://www.dictionaryapi.com/api/v1/references/medical/xml/"+ query.value +"?key="+apiKeyMedDict;
-	var xhr = createCORSRequest('GET', url);
-	xhr.setRequestHeader('Content-Type', 'text/xml');
-	xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+	//abbreviations API
+	var uid = "4373";
+    var tokenid = "S18j5J0VQ5rKxiv0";
+    var term = document.getElementById("search");
+	var abbrUrl = "http://www.stands4.com/services/v2/abbr.php?uid=" + uid + "&tokenid=" + tokenid + "&term="+term.value;
+
+	//var apiKeyMedDict = "aeee5df0-8558-4f8d-8d5d-83d30f069852";
+	//var query = document.getElementById("search");
+	//var url = "http://www.dictionaryapi.com/api/v1/references/medical/xml/"+ query.value +"?key="+apiKeyMedDict;
+	var xhr = createCORSRequest('GET', abbrUrl);
+	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 	if (!xhr) {
     	alert('CORS not supported');
     	return;
   	}
-	//xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
 	xhr.onload = function() {
-	    var text = xhr.responseText;
-	    var title = getTitle(text);
-	    console.log(text);
-	    alert('Response from CORS request to ' + url + ': ' + title);
+	    var xmlObj = xhr.responseXML;
+	    var result = xmlObj.getElementsByTagName("result")[0];
+	    var definition = result.getElementsByTagName("definition")[0];
+	    console.log(definition.textContent);
 	};
 
 	xhr.onerror = function() {
@@ -23,6 +29,20 @@ function apiCall() {
 	};
 
 	xhr.send();
+}
+
+function testCSV(){
+	var csvString = $.ajax({
+            url : "word_frequency.csv",
+            dataType: "text/csv",
+            success : function (data) {
+                alert("got here");
+            }
+        });
+	console.log(csvString);
+	//var x = "word_frequency.csv"+","+ "asas";
+	//var music = $.csv.toObjects(x);
+	//console.log(music);
 }
 
 function createCORSRequest(method, url) {
