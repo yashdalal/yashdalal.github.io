@@ -205,6 +205,16 @@ hr.small {
 
 .services {
     padding: 50px 0;
+    background-color: #d9d9d9;
+    color: #21766A;    
+}
+
+.services h3,h4{
+    font-weight: 300;
+}
+
+.services p{
+    font-size: 17px;
 }
 
 .service-item {
@@ -225,6 +235,10 @@ hr.small {
     -o-background-size: cover;
 }
 
+.m-30{
+    margin-bottom: 30px;
+}
+
 /* Portfolio */
 
 .portfolio {
@@ -240,6 +254,27 @@ hr.small {
 .img-portfolio {
     margin: 0 auto;
 
+}
+
+ul.project-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+ul.project-list li {
+  display: inline-block;
+  margin: 20px;
+  position: relative;
+}
+
+.img-project {
+    width: 200px;
+}
+.img-project-wide {
+    width: 500px;
+    margin: 30px;
 }
 
 ul.img-list {
