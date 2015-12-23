@@ -234,6 +234,7 @@ hr.small {
 
 .portfolio-item {
     margin-bottom: 30px;
+    position: relative;
 }
 
 .img-portfolio {
@@ -241,8 +242,47 @@ hr.small {
 
 }
 
-.img-portfolio:hover {
-    opacity: 0.8;
+ul.img-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+ul.img-list li {
+  display: inline-block;
+  width: 500px;
+  margin: 20px;
+  position: relative;
+}
+
+span.text-content {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  cursor: pointer;
+  display: table;
+  font-family: Garamond;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  left: 0;
+  position: absolute;
+  top: 0;  
+  height: 333px;
+  width: 500px;
+  opacity: 0;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  transition: opacity 500ms;
+}
+
+ul.img-list li:hover span.text-content {
+  opacity: 1;
+}
+span.text-content span {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
 }
 
 /* Call to Action */
