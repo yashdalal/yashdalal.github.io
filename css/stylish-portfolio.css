@@ -27,15 +27,27 @@ body {
     vertical-align: middle;
 }
 
-.text-vertical-center h1 {
-    margin: 0;
-    padding: 0;
+.text-top-left {
+    margin-left: 80px;
+    margin-top: 50px;
+}
+
+.header-text{
+    font-size: 15px;
+    line-height: 200%;
+}
+
+.bb-15{
+    margin-bottom: 15px;
+}
+
+.header-heading{
     font-size: 4.5em;
     font-weight: 300;
     letter-spacing: 3px;
 }
 
-.text-vertical-center h3 {
+.header h3 {
     letter-spacing: 3px;
     font-weight: 300;
 }
@@ -167,18 +179,26 @@ hr.small {
     width: 100%;
     height: 100%;
     color: #f7f8fa;
-    background: url(../img/bg.jpg) no-repeat center center scroll;
+    background: url(../img/bg-faded.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    -webkit-filter: blur();
 }
 
 /* About */
 
 .about {
     padding: 50px 0;
+    background-color: #7BC1B8;
+}
+
+.about h3,h4{
+    font-weight: 300;
+}
+
+.about p{
+    font-size: 17px;
 }
 
 /* Services */
@@ -209,6 +229,7 @@ hr.small {
 
 .portfolio {
     padding: 50px 0;
+    background-color: #afd9d4;
 }
 
 .portfolio-item {
@@ -217,6 +238,7 @@ hr.small {
 
 .img-portfolio {
     margin: 0 auto;
+
 }
 
 .img-portfolio:hover {
