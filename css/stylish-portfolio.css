@@ -340,6 +340,27 @@ span.text-content span {
     .map {
         height: 75%;
     }
+
+    .text-top-left {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+
+    .header-heading{
+      font-size: 50px;
+      font-weight: 300;
+      letter-spacing: 3px;
+    }
+
+    .header-text{
+      text-shadow: 1px 1px black;
+    }
+
+    .bb-15{
+      line-height: 200%;
+      margin-bottom: 15px;
+    }
 }
 
 /* Footer */
