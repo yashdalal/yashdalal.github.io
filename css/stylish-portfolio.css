@@ -273,8 +273,9 @@ ul.project-list li {
     width: 200px;
 }
 .img-project-wide {
-    width: 500px;
-    margin: 30px;
+    width: 90%;
+    height: auto;
+    margin: 30px 0;
 }
 
 ul.img-list {
@@ -361,6 +362,12 @@ span.text-content span {
       line-height: 200%;
       margin-bottom: 15px;
     }
+
+    .img-project-wide {
+    width: 100%;
+    height: auto;
+    margin: 30px 0;
+}
 }
 
 /* Footer */
